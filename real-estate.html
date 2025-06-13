@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real Estate Investment | Chicago Multifamily</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        /* Inherit existing styles */
+        .article-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+            line-height: 1.8;
+        }
+        
+        .article-content h3 {
+            color: var(--luxury-green);
+            margin: 2rem 0 1rem;
+            font-size: 1.8rem;
+            font-weight: normal;
+        }
+        
+        .article-content p {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
+
+        .tip-box {
+            background-color: white;
+            border: 1px solid var(--gold);
+            padding: 2rem;
+            margin: 2rem 0;
+        }
+
+        .tip-box h4 {
+            color: var(--luxury-green);
+            margin-bottom: 1rem;
+            font-size: 1.4rem;
+            font-weight: normal;
+        }
+
+        /* New styles for real estate content */
+        .metric-card {
+            background: white;
+            border: 1px solid var(--gold);
+            padding: 1.5rem;
+            margin: 1rem 0;
+            border-radius: 4px;
+        }
+
+        .metric-card h4 {
+            color: var(--luxury-green);
+            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+        }
+
+        .metric-value {
+            font-size: 1.8rem;
+            color: var(--luxury-green);
+            margin: 0.5rem 0;
+        }
+
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 2rem 0;
+        }
+
+        .comparison-table th, .comparison-table td {
+            padding: 1rem;
+            border: 1px solid var(--gold);
+            text-align: left;
+        }
+
+        .comparison-table th {
+            background-color: var(--luxury-green);
+            color: white;
+        }
+
+        .comparison-table tr:nth-child(even) {
+            background-color: var(--cream);
+        }
+
+        /* Side Navigation */
+        .side-nav {
+            position: fixed;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: white;
+            padding: 1rem;
+            border: 1px solid var(--gold);
+            border-radius: 8px;
+            z-index: 100;
+        }
+
+        .side-nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .side-nav li {
+            margin: 0.5rem 0;
+        }
+
+        .side-nav a {
+            color: var(--luxury-green);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+        }
+
+        .side-nav a:hover {
+            color: var(--gold);
+        }
+
+        /* Collapsible Sections */
+        .section-content {
+            display: none;
+            transition: all 0.3s ease;
+        }
+
+        .section-header {
+            cursor: pointer;
+            padding: 1rem 0;
+            border-bottom: 1px solid var(--gold);
+        }
+
+        .section-header:hover {
+            color: var(--luxury-green);
+        }
+
+        .section-header::after {
+            content: '+';
+            float: right;
+            font-size: 1.5rem;
+            color: var(--luxury-green);
+        }
+
+        .section-header.active::after {
+            content: '-';
+        }
+
+        .active + .section-content {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-content">
+            <a href="index.html" class="nav-logo">Your Name</a>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="index.html#about">About</a>
+                <a href="index.html#expertise">Expertise</a>
+                <a href="index.html#contact">Connect</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Chicago Multifamily Investment</h1>
+            <p>Strategic Real Estate Investment in the Windy City</p>
+        </div>
+    </section>
+
+    <nav class="side-nav">
+        <ul>
+            <li><a href="#market">Market Overview</a></li>
+            <li><a href="#comparison">Investment Comparison</a></li>
+            <li><a href="#tenants">Tenant Screening</a></li>
+            <li><a href="#metrics">Key Metrics</a></li>
+            <li><a href="#tax">Tax Strategy</a></li>
+        </ul>
+    </nav>
+
+    <section class="article-content">
+        <div id="market">
+            <h2 class="section-header">Chicago Market Overview</h2>
+            <div class="section-content">
+                <p>Chicago's multifamily market presents unique opportunities for investors, with strong fundamentals and steady demand growth.</p>
+
+                <div class="metric-card">
+                    <h4>Current Market Snapshot</h4>
+                    <p>• Average Occupancy Rate: 94.5%</p>
+                    <p>• Average Rent Growth: 3.2% YoY</p>
+                    <p>• Population Growth in Key Areas: 1.8% annually</p>
+                    <p>• Job Market Growth: Tech and Financial sectors leading</p>
+                </div>
+
+                <div class="tip-box">
+                    <h4>Key Market Indicators</h4>
+                    <p>• Strong rental demand in neighborhoods near public transit</p>
+                    <p>• Growing young professional demographic</p>
+                    <p>• Limited new construction in established neighborhoods</p>
+                    <p>• Stable employment market with diverse industries</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="comparison">
+            <h2 class="section-header">Why Multifamily?</h2>
+            <div class="section-content">
+                <p>Multifamily properties offer distinct advantages over other residential real estate investments.</p>
+
+                <table class="comparison-table">
+                    <tr>
+                        <th>Feature</th>
+                        <th>Multifamily</th>
+                        <th>Single Family</th>
+                        <th>Condos</th>
+                    </tr>
+                    <tr>
+                        <td>Income Stability</td>
+                        <td>High - Multiple Units</td>
+                        <td>Medium</td>
+                        <td>Low</td>
+                    </tr>
+                    <tr>
+                        <td>Management Efficiency</td>
+                        <td>High</td>
+                        <td>Low</td>
+                        <td>Medium</td>
+                    </tr>
+                    <tr>
+                        <td>Appreciation Potential</td>
+                        <td>Strong</td>
+                        <td>Market Dependent</td>
+                        <td>Limited</td>
+                    </tr>
+                    <tr>
+                        <td>Vacancy Impact</td>
+                        <td>Low per Unit</td>
+                        <td>High</td>
+                        <td>High</td>
+                    </tr>
+                </table>
+
+                <div class="tip-box">
+                    <h4>Multifamily Advantages</h4>
+                    <p>• Economies of Scale in Management</p>
+                    <p>• Diversified Income Streams</p>
+                    <p>• Better Financing Options</p>
+                    <p>• Enhanced Value-Add Opportunities</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="tenants">
+            <h2 class="section-header">Tenant Screening Process</h2>
+            <div class="section-content">
+                <p>A robust tenant screening process is crucial for maintaining property value and ensuring stable income.</p>
+
+                <div class="tip-box">
+                    <h4>Essential Screening Criteria</h4>
+                    <p>• Income Verification (3x monthly rent minimum)</p>
+                    <p>• Credit Score (minimum 650)</p>
+                    <p>• Employment History (2+ years stable employment)</p>
+                    <p>• Rental History & References</p>
+                    <p>• Background Check</p>
+                </div>
+
+                <h3>Documentation Requirements</h3>
+                <ul>
+                    <p>• Last 2 months of pay stubs</p>
+                    <p>• Previous year W-2</p>
+                    <p>• Bank statements</p>
+                    <p>• Government-issued ID</p>
+                    <p>• Previous landlord contact information</p>
+                </ul>
+            </div>
+        </div>
+
+        <div id="metrics">
+            <h2 class="section-header">Key Investment Metrics</h2>
+            <div class="section-content">
+                <div class="metric-card">
+                    <h4>Cap Rate</h4>
+                    <p>Net Operating Income / Property Value</p>
+                    <p class="metric-value">Target: 6-8% in Chicago</p>
+                </div>
+
+                <div class="metric-card">
+                    <h4>Cash on Cash Return</h4>
+                    <p>Annual Cash Flow / Total Cash Invested</p>
+                    <p class="metric-value">Minimum: 8%</p>
+                </div>
+
+                <div class="metric-card">
+                    <h4>Debt Service Coverage Ratio</h4>
+                    <p>NOI / Annual Mortgage Payments</p>
+                    <p class="metric-value">Minimum: 1.25</p>
+                </div>
+
+                <div class="tip-box">
+                    <h4>Additional Considerations</h4>
+                    <p>• Price per Unit</p>
+                    <p>• Gross Rent Multiplier</p>
+                    <p>• Operating Expense Ratio</p>
+                    <p>• Return on Investment (ROI)</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="tax">
+            <h2 class="section-header">Tax Strategy & Depreciation</h2>
+            <div class="section-content">
+                <p>Understanding tax benefits and depreciation is crucial for maximizing investment returns.</p>
+
+                <div class="tip-box">
+                    <h4>Depreciation Benefits</h4>
+                    <p>• Residential Property: 27.5-year schedule</p>
+                    <p>• Land Value: Non-depreciable</p>
+                    <p>• Capital Improvements: Various schedules</p>
+                    <p>• Bonus Depreciation Opportunities</p>
+                </div>
+
+                <h3>Tax Deductions</h3>
+                <p>Common deductible expenses for multifamily properties:</p>
+                <ul>
+                    <p>• Mortgage Interest</p>
+                    <p>• Property Management Fees</p>
+                    <p>• Repairs and Maintenance</p>
+                    <p>• Property Taxes</p>
+                    <p>• Insurance Premiums</p>
+                    <p>• Professional Services</p>
+                </ul>
+
+                <div class="tip-box">
+                    <h4>Tax Strategy Tips</h4>
+                    <p>• Consider Cost Segregation Studies</p>
+                    <p>• Track All Expenses Meticulously</p>
+                    <p>• Plan Major Improvements Strategically</p>
+                    <p>• Consult with Tax Professional Regularly</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Add JavaScript for collapsible sections
+        document.querySelectorAll('.section-header').forEach(header => {
+            header.addEventListener('click', () => {
+                header.classList.toggle('active');
+            });
+        });
+
+        // Open section if URL has hash
+        if(window.location.hash) {
+            const section = document.querySelector(window.location.hash + ' .section-header');
+            if(section) section.classList.add('active');
+        }
+    </script>
+
+    <footer>
+        <p>&copy; 2024 Your Name. All rights reserved.</p>
+    </footer>
+</body>
+</html> 

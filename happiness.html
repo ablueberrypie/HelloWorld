@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Art & Science of Happiness</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        .happiness-card {
+            background: white;
+            border: 1px solid var(--gold);
+            padding: 2rem;
+            margin: 1.5rem 0;
+            border-radius: 4px;
+        }
+
+        .happiness-card h3 {
+            color: var(--luxury-green);
+            margin-bottom: 1rem;
+            font-size: 1.6rem;
+        }
+
+        .practice-box {
+            background: var(--cream);
+            padding: 1.5rem;
+            margin: 1rem 0;
+            border-left: 4px solid var(--luxury-green);
+        }
+
+        .quote-box {
+            font-style: italic;
+            padding: 1.5rem;
+            margin: 1rem 0;
+            border-left: 3px solid var(--gold);
+            background: rgba(255, 255, 255, 0.5);
+        }
+
+        .practice-steps {
+            list-style: none;
+            padding: 0;
+        }
+
+        .practice-steps li {
+            margin: 1rem 0;
+            padding-left: 2rem;
+            position: relative;
+        }
+
+        .practice-steps li::before {
+            content: "→";
+            color: var(--luxury-green);
+            position: absolute;
+            left: 0;
+        }
+
+        .insight-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .insight-card {
+            background: white;
+            padding: 1.5rem;
+            border: 1px solid var(--gold);
+            text-align: center;
+        }
+
+        .insight-card h4 {
+            color: var(--luxury-green);
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-content">
+            <a href="index.html" class="nav-logo">A Blueberry Pie</a>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="index.html#about">About</a>
+                <a href="index.html#expertise">Expertise</a>
+                <a href="index.html#contact">Connect</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>The Art & Science of Happiness</h1>
+            <p>Cultivating Joy Through Mindful Living</p>
+        </div>
+    </section>
+
+    <section class="article-content">
+        <div class="happiness-card">
+            <h3>The Science of Mindfulness</h3>
+            <p>Mindfulness is more than a buzzword—it's a scientifically validated approach to well-being.</p>
+            <div class="quote-box">
+                "The present moment is the only time over which we have dominion." - Thích Nhất Hạnh
+            </div>
+            <div class="practice-box">
+                <h4>Daily Mindfulness Practice</h4>
+                <ol class="practice-steps">
+                    <li>Start with 5 minutes of focused breathing</li>
+                    <li>Notice thoughts without judgment</li>
+                    <li>Return attention gently to the breath</li>
+                    <li>Gradually extend practice duration</li>
+                </ol>
+            </div>
+            <div class="insight-grid">
+                <div class="insight-card">
+                    <h4>Stress Reduction</h4>
+                    <p>Regular practice reduces cortisol levels by up to 23%</p>
+                </div>
+                <div class="insight-card">
+                    <h4>Focus Enhancement</h4>
+                    <p>Improves attention span by 16% after 8 weeks</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="happiness-card">
+            <h3>The Power of Relationships</h3>
+            <p>Strong social connections are the foundation of lasting happiness.</p>
+            <div class="quote-box">
+                "The good life is built with good relationships." - Harvard Study of Adult Development
+            </div>
+            <div class="practice-box">
+                <h4>Building Meaningful Connections</h4>
+                <ul class="practice-steps">
+                    <li>Practice active listening without interruption</li>
+                    <li>Express gratitude regularly</li>
+                    <li>Share vulnerabilities thoughtfully</li>
+                    <li>Create and honor traditions</li>
+                </ul>
+            </div>
+            <div class="insight-grid">
+                <div class="insight-card">
+                    <h4>Longevity Impact</h4>
+                    <p>Strong relationships can extend life by up to 7 years</p>
+                </div>
+                <div class="insight-card">
+                    <h4>Emotional Resilience</h4>
+                    <p>Social support reduces stress response by 50%</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="happiness-card">
+            <h3>Living with Purpose</h3>
+            <p>Purpose transforms ordinary moments into meaningful experiences.</p>
+            <div class="quote-box">
+                "He who has a why to live can bear almost any how." - Friedrich Nietzsche
+            </div>
+            <div class="practice-box">
+                <h4>Finding Your Purpose</h4>
+                <ul class="practice-steps">
+                    <li>Identify core values and beliefs</li>
+                    <li>Explore activities that create flow</li>
+                    <li>Connect personal gifts with community needs</li>
+                    <li>Set meaningful goals aligned with values</li>
+                </ul>
+            </div>
+            <div class="insight-grid">
+                <div class="insight-card">
+                    <h4>Life Satisfaction</h4>
+                    <p>Purpose-driven life increases happiness by 64%</p>
+                </div>
+                <div class="insight-card">
+                    <h4>Career Impact</h4>
+                    <p>Meaningful work boosts engagement by 225%</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="happiness-card">
+            <h3>Holistic Well-being</h3>
+            <p>True happiness emerges from the harmony of physical, mental, and emotional health.</p>
+            <div class="practice-box">
+                <h4>Daily Well-being Practices</h4>
+                <ul class="practice-steps">
+                    <li>Prioritize quality sleep (7-9 hours)</li>
+                    <li>Move your body mindfully</li>
+                    <li>Nourish with whole foods</li>
+                    <li>Practice emotional awareness</li>
+                </ul>
+            </div>
+            <div class="insight-grid">
+                <div class="insight-card">
+                    <h4>Sleep Impact</h4>
+                    <p>Quality sleep improves happiness by 31%</p>
+                </div>
+                <div class="insight-card">
+                    <h4>Exercise Effect</h4>
+                    <p>30 minutes of movement boosts mood for 12 hours</p>
+                </div>
+                <div class="insight-card">
+                    <h4>Nutrition Link</h4>
+                    <p>Whole foods diet reduces depression risk by 35%</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 A Blueberry Pie. All rights reserved.</p>
+    </footer>
+</body>
+</html> 

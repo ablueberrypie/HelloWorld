@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Property Analysis Framework</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        .metric-card {
+            background: white;
+            border: 1px solid var(--gold);
+            padding: 2rem;
+            margin: 1.5rem 0;
+            border-radius: 4px;
+        }
+
+        .metric-card h3 {
+            color: var(--luxury-green);
+            margin-bottom: 1rem;
+            font-size: 1.6rem;
+        }
+
+        .metric-formula {
+            font-family: monospace;
+            background: var(--cream);
+            padding: 1rem;
+            margin: 1rem 0;
+            border-left: 4px solid var(--luxury-green);
+        }
+
+        .target-range {
+            font-size: 1.2rem;
+            color: var(--luxury-green);
+            margin: 0.5rem 0;
+        }
+
+        .limitation-box {
+            background: var(--cream);
+            border: 1px solid var(--gold);
+            padding: 2rem;
+            margin: 2rem 0;
+        }
+
+        .limitation-box h3 {
+            color: var(--luxury-green);
+            margin-bottom: 1rem;
+        }
+
+        .download-section {
+            background: white;
+            padding: 3rem;
+            text-align: center;
+            margin: 3rem 0;
+            border: 1px solid var(--gold);
+        }
+
+        .download-section h2 {
+            margin-bottom: 1.5rem;
+        }
+
+        .feature-list {
+            text-align: left;
+            max-width: 600px;
+            margin: 2rem auto;
+        }
+
+        .feature-list li {
+            margin: 0.5rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+            list-style-type: none;
+        }
+
+        .feature-list li::before {
+            content: "•";
+            color: var(--luxury-green);
+            position: absolute;
+            left: 0;
+            font-size: 1.2em;
+        }
+
+        .big-download-button {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background-color: var(--luxury-green);
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            font-size: 1.2rem;
+            margin-top: 2rem;
+            transition: all 0.3s ease;
+        }
+
+        .big-download-button:hover {
+            transform: translateY(-2px);
+            opacity: 0.9;
+        }
+
+        /* New styles for market data and examples */
+        .market-data-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .market-stat {
+            background: white;
+            padding: 1.5rem;
+            border: 1px solid var(--gold);
+            text-align: center;
+        }
+
+        .market-stat .value {
+            font-size: 2rem;
+            color: var(--luxury-green);
+            margin: 0.5rem 0;
+        }
+
+        .example-calculation {
+            background: white;
+            padding: 2rem;
+            margin: 1.5rem 0;
+            border: 1px solid var(--gold);
+        }
+
+        .calculation-steps {
+            font-family: monospace;
+            background: var(--cream);
+            padding: 1.5rem;
+            margin: 1rem 0;
+            line-height: 1.8;
+        }
+
+        .template-preview {
+            background: white;
+            border: 1px solid var(--gold);
+            padding: 2rem;
+            margin: 2rem 0;
+        }
+
+        .preview-image {
+            max-width: 100%;
+            height: auto;
+            margin: 1rem 0;
+            border: 1px solid var(--gold);
+        }
+
+        .tab-section {
+            margin: 2rem 0;
+        }
+
+        .tab-buttons {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .tab-button {
+            padding: 0.5rem 1rem;
+            background: var(--cream);
+            border: 1px solid var(--gold);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .tab-button.active {
+            background: var(--luxury-green);
+            color: white;
+        }
+
+        .tab-content {
+            display: none;
+            padding: 1rem;
+            border: 1px solid var(--gold);
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-content">
+            <a href="index.html" class="nav-logo">Your Name</a>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="index.html#about">About</a>
+                <a href="index.html#expertise">Expertise</a>
+                <a href="index.html#contact">Connect</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Property Analysis Framework</h1>
+            <p>Beyond Year One: A Comprehensive Investment Evaluation</p>
+        </div>
+    </section>
+
+    <section class="article-content">
+        <h2>Chicago Market Overview</h2>
+        <div class="market-data-grid">
+            <div class="market-stat">
+                <h4>Average Cap Rate</h4>
+                <div class="value">5.8%</div>
+                <p>Class B Multifamily</p>
+            </div>
+            <div class="market-stat">
+                <h4>Rent Growth</h4>
+                <div class="value">3.2%</div>
+                <p>Year over Year</p>
+            </div>
+            <div class="market-stat">
+                <h4>Occupancy Rate</h4>
+                <div class="value">94.5%</div>
+                <p>Market Average</p>
+            </div>
+            <div class="market-stat">
+                <h4>Price per Unit</h4>
+                <div class="value">$165K</div>
+                <p>Class B Average</p>
+            </div>
+        </div>
+
+        <div class="example-calculation">
+            <h3>Example: 12-Unit Property Analysis</h3>
+            <p>Let's analyze a sample 12-unit property in Chicago's North Side:</p>
+            
+            <div class="calculation-steps">
+                Property Details:
+                - Purchase Price: $2,400,000
+                - Annual Gross Rent: $300,000
+                - Operating Expenses: $120,000
+                - Mortgage (75% LTV): $1,800,000
+                
+                Year 1 Calculations:
+                1. NOI = $300,000 - $120,000 = $180,000
+                2. Cap Rate = ($180,000 / $2,400,000) × 100 = 7.5%
+                3. Annual Debt Service = $102,000
+                4. DSCR = $180,000 / $102,000 = 1.76
+                5. Cash Flow = $78,000
+                6. Cash on Cash = ($78,000 / $600,000) × 100 = 13%
+
+                5-Year Projection:
+                - Assumed Rent Growth: 3% annually
+                - Expense Growth: 2.5% annually
+                - Property Appreciation: 3% annually
+                - Loan Paydown: ~$150,000
+            </div>
+        </div>
+
+        <h2>Key Investment Metrics</h2>
+        
+        <div class="metric-card">
+            <h3>Cap Rate</h3>
+            <div class="metric-formula">
+                Cap Rate = (Net Operating Income / Property Value) × 100
+            </div>
+            <p>Measures the unlevered return of a property, indicating its income-generating potential relative to its value.</p>
+            <p class="target-range">Target Range: 5-8% for Chicago multifamily properties</p>
+        </div>
+
+        <div class="metric-card">
+            <h3>Cash on Cash Return</h3>
+            <div class="metric-formula">
+                CoC Return = (Annual Cash Flow / Total Cash Invested) × 100
+            </div>
+            <p>Measures the cash income earned relative to the cash invested, showing actual return on investment.</p>
+            <p class="target-range">Target Range: 8-12% minimum</p>
+        </div>
+
+        <div class="metric-card">
+            <h3>Debt Service Coverage Ratio (DSCR)</h3>
+            <div class="metric-formula">
+                DSCR = Net Operating Income / Annual Debt Service
+            </div>
+            <p>Indicates the property's ability to cover its debt payments from operating income.</p>
+            <p class="target-range">Target Range: Minimum 1.25, preferably 1.5+</p>
+        </div>
+
+        <div class="limitation-box">
+            <h3>Limitations of Traditional Metrics</h3>
+            <p>Standard real estate metrics often focus solely on Year 1 performance, which can be misleading for long-term investments. They fail to account for:</p>
+            <ul>
+                <li>Rent growth over time</li>
+                <li>Property appreciation</li>
+                <li>Mortgage paydown (equity buildup)</li>
+                <li>Tax benefits from depreciation</li>
+                <li>Capital expenditure timing</li>
+                <li>Market cycle impacts</li>
+            </ul>
+        </div>
+
+        <div class="metric-card">
+            <h3>Multi-Year ROI Analysis</h3>
+            <p>Our enhanced analysis framework considers:</p>
+            <ul>
+                <li>Projected rent increases based on market trends</li>
+                <li>Variable expense growth rates</li>
+                <li>Long-term property appreciation</li>
+                <li>Equity buildup through loan amortization</li>
+                <li>Tax implications and benefits</li>
+                <li>Capital expenditure planning</li>
+            </ul>
+        </div>
+
+        <div class="template-preview">
+            <h2>Excel Template Preview</h2>
+            <div class="tab-section">
+                <div class="tab-buttons">
+                    <button class="tab-button active">Dashboard</button>
+                    <button class="tab-button">Cash Flow</button>
+                    <button class="tab-button">Metrics</button>
+                </div>
+                <div class="tab-content active">
+                    <h3>Investment Summary Dashboard</h3>
+                    <p>The dashboard provides a comprehensive overview of your investment:</p>
+                    <ul>
+                        <li>Key performance metrics at a glance</li>
+                        <li>Interactive charts showing cash flow projections</li>
+                        <li>Investment returns summary</li>
+                        <li>Risk analysis indicators</li>
+                    </ul>
+                </div>
+                <div class="tab-content">
+                    <h3>Multi-Year Cash Flow Analysis</h3>
+                    <p>Detailed cash flow projections including:</p>
+                    <ul>
+                        <li>Revenue growth modeling</li>
+                        <li>Operating expense tracking</li>
+                        <li>Capital expenditure planning</li>
+                        <li>Debt service calculations</li>
+                    </ul>
+                </div>
+                <div class="tab-content">
+                    <h3>Advanced Metrics Calculator</h3>
+                    <p>Comprehensive metrics analysis including:</p>
+                    <ul>
+                        <li>Traditional and advanced ROI calculations</li>
+                        <li>Equity multiple scenarios</li>
+                        <li>IRR and NPV analysis</li>
+                        <li>Sensitivity testing</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="download-section">
+            <h2>Download Analysis Template</h2>
+            <p>Access our comprehensive Excel template for thorough property analysis</p>
+            
+            <div class="feature-list">
+                <h3>Template Features:</h3>
+                <ul>
+                    <li>Multi-year cash flow projections</li>
+                    <li>Dynamic ROI calculations</li>
+                    <li>Scenario analysis capabilities</li>
+                    <li>Tax benefit estimator</li>
+                    <li>Comparative market analysis tools</li>
+                    <li>Investment summary dashboard</li>
+                </ul>
+            </div>
+
+            <a href="downloads/property-analysis-template.xlsx" download class="big-download-button">
+                <span class="download-icon">📊</span> Download Excel Template
+            </a>
+        </div>
+    </section>
+
+    <script>
+        // Add tab functionality
+        document.querySelectorAll('.tab-button').forEach((button, index) => {
+            button.addEventListener('click', () => {
+                // Remove active class from all buttons and contents
+                document.querySelectorAll('.tab-button').forEach(btn => btn.classList.remove('active'));
+                document.querySelectorAll('.tab-content').forEach(content => content.classList.remove('active'));
+                
+                // Add active class to clicked button and corresponding content
+                button.classList.add('active');
+                document.querySelectorAll('.tab-content')[index].classList.add('active');
+            });
+        });
+
+        // Existing collapsible section script
+        document.querySelectorAll('.section-header').forEach(header => {
+            header.addEventListener('click', () => {
+                header.classList.toggle('active');
+            });
+        });
+    </script>
+
+    <footer>
+        <p>&copy; 2024 Your Name. All rights reserved.</p>
+    </footer>
+</body>
+</html> 

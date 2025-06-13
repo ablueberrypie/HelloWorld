@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Parenting | Work-Life Balance</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        .article-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+            line-height: 1.8;
+        }
+        
+        .article-content h3 {
+            color: var(--luxury-green);
+            margin: 2rem 0 1rem;
+            font-size: 1.8rem;
+            font-weight: normal;
+        }
+        
+        .article-content p {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
+
+        .tip-box {
+            background-color: white;
+            border: 1px solid var(--gold);
+            padding: 2rem;
+            margin: 2rem 0;
+        }
+
+        .tip-box h4 {
+            color: var(--luxury-green);
+            margin-bottom: 1rem;
+            font-size: 1.4rem;
+            font-weight: normal;
+        }
+
+        .hero {
+            position: relative;
+            background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+                       url('https://images.unsplash.com/photo-1536640712-4d4c36ff0e4e?auto=format&fit=crop&w=2000&q=80') center/cover;
+            color: white;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(29, 60, 52, 0.3);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .book-summary {
+            background-color: white;
+            border-left: 4px solid var(--luxury-green);
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .book-summary h5 {
+            color: var(--luxury-green);
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .book-summary p {
+            font-size: 1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Side Navigation */
+        .side-nav {
+            position: fixed;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: white;
+            padding: 1rem;
+            border: 1px solid var(--gold);
+            border-radius: 8px;
+            z-index: 100;
+        }
+
+        .side-nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .side-nav li {
+            margin: 0.5rem 0;
+        }
+
+        .side-nav a {
+            color: var(--luxury-green);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+        }
+
+        .side-nav a:hover {
+            color: var(--gold);
+        }
+
+        /* Collapsible Sections */
+        .section-content {
+            display: none;
+            transition: all 0.3s ease;
+        }
+
+        .section-header {
+            cursor: pointer;
+            padding: 1rem 0;
+            border-bottom: 1px solid var(--gold);
+        }
+
+        .section-header:hover {
+            color: var(--luxury-green);
+        }
+
+        .section-header::after {
+            content: '+';
+            float: right;
+            font-size: 1.5rem;
+            color: var(--luxury-green);
+        }
+
+        .section-header.active::after {
+            content: '-';
+        }
+
+        .active + .section-content {
+            display: block;
+        }
+
+        /* Book Links */
+        .amazon-link {
+            display: inline-block;
+            margin-top: 0.5rem;
+            padding: 0.5rem 1rem;
+            background-color: var(--luxury-green);
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            transition: opacity 0.3s ease;
+        }
+
+        .amazon-link:hover {
+            opacity: 0.9;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-content">
+            <a href="index.html" class="nav-logo">Your Name</a>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="index.html#about">About</a>
+                <a href="index.html#expertise">Expertise</a>
+                <a href="index.html#contact">Connect</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Modern Parenting</h1>
+            <p>Navigating Work-Life Balance in Today's World</p>
+        </div>
+    </section>
+
+    <!-- Side Navigation -->
+    <nav class="side-nav">
+        <ul>
+            <li><a href="#overview">Overview</a></li>
+            <li><a href="#sleep">Sleep Training</a></li>
+            <li><a href="#personality">Personality</a></li>
+            <li><a href="#ai">AI & Development</a></li>
+            <li><a href="#books">Reading List</a></li>
+            <li><a href="#routines">Routines</a></li>
+        </ul>
+    </nav>
+
+    <section class="article-content">
+        <div id="overview">
+            <h2 class="section-header">Finding Balance in Modern Parenthood</h2>
+            <div class="section-content">
+                <p>In today's fast-paced world, balancing a successful career with meaningful family time has become both more challenging and more important than ever. As parents, we're constantly seeking ways to be present for our children while maintaining professional growth and personal fulfillment.</p>
+
+                <div class="tip-box">
+                    <h4>Key Principles of Modern Parenting</h4>
+                    <p>• Quality over Quantity: Making the most of the time we spend with our children</p>
+                    <p>• Intentional Presence: Being fully engaged during family time</p>
+                    <p>• Digital Boundaries: Creating healthy limits with technology</p>
+                    <p>• Self-Care: Maintaining personal well-being to be a better parent</p>
+                </div>
+
+                <h3>Sleep Training Essentials</h3>
+                <p>Establishing healthy sleep habits is crucial for both children's development and parents' well-being. A well-rested family is a happier, more productive family.</p>
+                
+                <div class="tip-box">
+                    <h4>Sleep Training Approaches</h4>
+                    <p>• Gradual Method: Gentle, progressive approach to independent sleep</p>
+                    <p>• Consistent Routines: Establishing predictable bedtime patterns</p>
+                    <p>• Age-Appropriate Schedules: Adapting sleep needs as children grow</p>
+                    <p>• Environmental Setup: Creating optimal sleep conditions</p>
+                </div>
+
+                <h3>Personality Development & Growth</h3>
+                <p>Understanding and nurturing your child's unique personality while fostering emotional intelligence and resilience is key to modern parenting. This includes recognizing individual traits, supporting natural inclinations, and providing opportunities for growth.</p>
+
+                <div class="tip-box">
+                    <h4>Supporting Child Development</h4>
+                    <p>• Emotional Intelligence: Teaching emotional awareness and regulation</p>
+                    <p>• Individual Interests: Encouraging personal passions and curiosities</p>
+                    <p>• Growth Mindset: Fostering resilience and learning from challenges</p>
+                    <p>• Social Skills: Building confidence in interactions</p>
+                </div>
+
+                <h3>Socialization in the Age of AI</h3>
+                <p>As artificial intelligence becomes increasingly prevalent, helping children navigate the balance between digital and real-world interactions is crucial. This includes fostering authentic connections while leveraging technology's benefits.</p>
+
+                <div class="tip-box">
+                    <h4>Digital Age Social Skills</h4>
+                    <p>• Real-world Connections: Prioritizing face-to-face interactions</p>
+                    <p>• Digital Literacy: Understanding technology's role and limitations</p>
+                    <p>• Online Safety: Teaching responsible digital citizenship</p>
+                    <p>• Balance: Combining traditional and modern social skills</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="sleep">
+            <h2 class="section-header">Sleep Training Essentials</h2>
+            <div class="section-content">
+                <h3>Sleep Training Essentials</h3>
+                <p>Establishing healthy sleep habits is crucial for both children's development and parents' well-being. A well-rested family is a happier, more productive family.</p>
+                
+                <div class="tip-box">
+                    <h4>Sleep Training Approaches</h4>
+                    <p>• Gradual Method: Gentle, progressive approach to independent sleep</p>
+                    <p>• Consistent Routines: Establishing predictable bedtime patterns</p>
+                    <p>• Age-Appropriate Schedules: Adapting sleep needs as children grow</p>
+                    <p>• Environmental Setup: Creating optimal sleep conditions</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="personality">
+            <h2 class="section-header">Personality Development & Growth</h2>
+            <div class="section-content">
+                <h3>Personality Development & Growth</h3>
+                <p>Understanding and nurturing your child's unique personality while fostering emotional intelligence and resilience is key to modern parenting. This includes recognizing individual traits, supporting natural inclinations, and providing opportunities for growth.</p>
+
+                <div class="tip-box">
+                    <h4>Supporting Child Development</h4>
+                    <p>• Emotional Intelligence: Teaching emotional awareness and regulation</p>
+                    <p>• Individual Interests: Encouraging personal passions and curiosities</p>
+                    <p>• Growth Mindset: Fostering resilience and learning from challenges</p>
+                    <p>• Social Skills: Building confidence in interactions</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="ai">
+            <h2 class="section-header">AI & Child Development</h2>
+            <div class="section-content">
+                <p>As artificial intelligence reshapes our world, parents face unique challenges and opportunities in raising children who can thrive in an AI-enhanced future.</p>
+
+                <div class="tip-box">
+                    <h4>AI Literacy for Children</h4>
+                    <p>• Understanding AI Basics: Age-appropriate explanations of AI technology</p>
+                    <p>• Critical Thinking: Teaching children to question and evaluate AI responses</p>
+                    <p>• Creative Problem-Solving: Encouraging solutions that AI can't replicate</p>
+                    <p>• Emotional Intelligence: Developing skills that distinguish humans from AI</p>
+                </div>
+
+                <h3>Balancing Technology Use</h3>
+                <p>Creating a healthy relationship with AI and technology while maintaining essential human connections and experiences.</p>
+
+                <div class="tip-box">
+                    <h4>Technology Balance Strategies</h4>
+                    <p>• Screen Time Guidelines: Age-based recommendations for tech exposure</p>
+                    <p>• Digital Wellness: Teaching mindful technology use</p>
+                    <p>• Real-World Priority: Emphasizing physical play and outdoor activities</p>
+                    <p>• Family Tech Rules: Creating and enforcing healthy boundaries</p>
+                </div>
+
+                <h3>AI as a Learning Tool</h3>
+                <p>Leveraging AI resources to enhance education while maintaining human guidance and creativity.</p>
+
+                <div class="tip-box">
+                    <h4>Educational AI Integration</h4>
+                    <p>• Homework Help: Appropriate use of AI tools for learning</p>
+                    <p>• Creative Projects: Combining AI tools with human creativity</p>
+                    <p>• Research Skills: Teaching effective online information evaluation</p>
+                    <p>• Future Preparation: Developing skills for an AI-integrated world</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="books">
+            <h2 class="section-header">Recommended Reading</h2>
+            <div class="section-content">
+                <div class="book-summary">
+                    <h5>"The Whole-Brain Child"</h5>
+                    <p>Key Takeaway: Understanding your child's developing mind and how to nurture healthy brain development.</p>
+                    <a href="https://www.amazon.com/Whole-Brain-Child-Revolutionary-Strategies-Developing/dp/0553386697" target="_blank" class="amazon-link">View on Amazon</a>
+                </div>
+
+                <div class="book-summary">
+                    <h5>"How to Talk So Kids Will Listen & Listen So Kids Will Talk"</h5>
+                    <p>Key Takeaway: Effective communication strategies that build strong parent-child relationships.</p>
+                    <a href="https://www.amazon.com/How-Talk-Kids-Will-Listen/dp/1451663889" target="_blank" class="amazon-link">View on Amazon</a>
+                </div>
+
+                <div class="book-summary">
+                    <h5>"Mindset: The New Psychology of Success"</h5>
+                    <p>Key Takeaway: Fostering a growth mindset in both parents and children for lifelong learning.</p>
+                    <a href="https://www.amazon.com/Mindset-Psychology-Carol-S-Dweck/dp/0345472322" target="_blank" class="amazon-link">View on Amazon</a>
+                </div>
+
+                <div class="book-summary">
+                    <h5>"Raising a Screen-Smart Kid"</h5>
+                    <p>Key Takeaway: Guiding children through the digital age while maintaining healthy boundaries.</p>
+                    <a href="https://www.amazon.com/Raising-Screen-Smart-Kid-Boundaries-Technology/dp/0814439799" target="_blank" class="amazon-link">View on Amazon</a>
+                </div>
+            </div>
+        </div>
+
+        <h3>Creating Meaningful Routines</h3>
+        <p>Establishing consistent family routines helps create stability and predictability for both children and parents. Whether it's morning preparation for school, evening dinner conversations, or weekend activities, these routines become the foundation of family bonding and childhood memories.</p>
+
+        <h3>Managing Work and Family Time</h3>
+        <p>The key to successful work-life integration lies in setting clear boundaries and expectations. This might mean dedicated "no-phone" times during family activities, scheduling important meetings around school events, or creating a flexible work arrangement that accommodates both professional and family responsibilities.</p>
+
+        <div class="tip-box">
+            <h4>Practical Time Management Tips</h4>
+            <p>• Block scheduling for focused work and family time</p>
+            <p>• Meal planning to reduce daily decision-making</p>
+            <p>• Shared family calendars for better coordination</p>
+            <p>• Designated workspace and work hours when working from home</p>
+        </div>
+    </section>
+
+    <script>
+        // Add JavaScript for collapsible sections
+        document.querySelectorAll('.section-header').forEach(header => {
+            header.addEventListener('click', () => {
+                header.classList.toggle('active');
+            });
+        });
+
+        // Open section if URL has hash
+        if(window.location.hash) {
+            const section = document.querySelector(window.location.hash + ' .section-header');
+            if(section) section.classList.add('active');
+        }
+    </script>
+
+    <footer>
+        <p>&copy; 2024 Your Name. All rights reserved.</p>
+    </footer>
+</body>
+</html> 
