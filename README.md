@@ -1,4 +1,3 @@
 # HelloWorld
-Hello World Tutorial
-
-Step 2: Create a branch
+Hello World
+Let's try to build a site! 
